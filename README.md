@@ -3,7 +3,7 @@
 **Reproduce DeFi hack incidents using Foundry.**
 
 
-833 incidents included.
+838 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -54,6 +54,11 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
+[20260715 BarnBridge](#20260715-barnbridge---governance-controlled-controller-approval-sweep)
+[20260714 Drips Network](#20260714-drips-network---uint128-to-int128-sign-flip)
+[20260713 Chi Protocol](#20260713-chi-protocol---reserve-accounting-inflation)
+[20260711 Bonzo Lend](#20260711-bonzo-lend---zero-signature-oracle-proof)
+[20260702 Hinkal](#20260702-hinkal---proofless-deposit)
 [20260714 Lumi Finance](#20260714-lumi-finance---erc-4337-validation-phase-paymaster-approval)
 [20260701 edel-xstock](#20260701-edel-xstock---price-oracle-manipulation)
 [20260629 Vault4626](#20260629-vault4626---business-logic-flaw)
@@ -1746,6 +1751,56 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 ---
 
 ### List of DeFi Hacks & POCs
+
+### 20260715 BarnBridge - Governance-Controlled Controller Approval Sweep
+### Lost: ~$776K
+```sh
+forge test --contracts ./src/test/2026-07 --match-path ./src/test/2026-07/BarnBridge_exp.sol -vvv
+```
+#### Contract
+[BarnBridge_exp.sol](src/test/2026-07/BarnBridge_exp.sol)
+
+---
+
+### 20260714 Drips Network - uint128-to-int128 Sign Flip
+### Lost: ~24,883 DAI
+```sh
+forge test --contracts ./src/test/2026-07 --match-path ./src/test/2026-07/DripsNetwork_exp.sol -vvv
+```
+#### Contract
+[DripsNetwork_exp.sol](src/test/2026-07/DripsNetwork_exp.sol)
+
+---
+
+### 20260713 Chi Protocol - Reserve Accounting Inflation
+### Lost: ~4.66 WETH
+```sh
+forge test --contracts ./src/test/2026-07 --match-path ./src/test/2026-07/ChiProtocol_exp.sol --evm-version osaka -vvv
+```
+#### Contract
+[ChiProtocol_exp.sol](src/test/2026-07/ChiProtocol_exp.sol)
+
+---
+
+### 20260711 Bonzo Lend - Zero-Signature Oracle Proof
+### Lost: ~$9.05M
+```sh
+forge test --contracts ./src/test/2026-07 --match-path ./src/test/2026-07/BonzoLend_exp.sol -vvv
+```
+#### Contract
+[BonzoLend_exp.sol](src/test/2026-07/BonzoLend_exp.sol)
+
+---
+
+### 20260702 Hinkal - Proofless Deposit
+### Lost: ~$820K
+```sh
+forge test --contracts ./src/test/2026-07 --match-path ./src/test/2026-07/Hinkal_exp.sol -vvv
+```
+#### Contract
+[Hinkal_exp.sol](src/test/2026-07/Hinkal_exp.sol)
+
+---
 
 ### 20260714 Lumi Finance - ERC-4337 Validation-Phase Paymaster Approval
 ### Lost: ~264,000 USD

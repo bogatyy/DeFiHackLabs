@@ -23,6 +23,7 @@ base = "https://developer-access-mainnet.base.org"
 linea = "https://linea.drpc.org"
 mantle = "https://rpc.mantle.xyz"
 sei = "wss://sei.drpc.org"
+hedera = "https://mainnet.hashio.io/api"
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/.config
 
@@ -39,6 +40,3 @@ single_line_statement_blocks = 'preserve'
 variable_override_spacing = true
 wrap_comments = false
 ignore = []
-
-
-
