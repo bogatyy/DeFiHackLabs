@@ -13,17 +13,19 @@ blast = "https://rpc.ankr.com/blast"
 optimism = "https://optimism.llamarpc.com"
 fantom = "https://fantom-pokt.nodies.app"
 arbitrum =  "https://arb1.arbitrum.io/rpc" # https://arbitrum.llamarpc.com
-bsc = "https://binance.llamarpc.com"
+bsc = "https://bsc-mainnet.public.blastapi.io"
 moonriver = "https://moonriver.public.blastapi.io"
-gnosis = "https://gnosis-mainnet.public.blastapi.io"
+gnosis = "https://rpc.gnosischain.com"
 avalanche = "https://avax.meowrpc.com"
 polygon = "https://polygon.drpc.org"
 celo = "https://rpc.ankr.com/celo"
 base = "https://developer-access-mainnet.base.org"
-linea = "https://linea.drpc.org"
+linea = "https://rpc.linea.build"
 mantle = "https://rpc.mantle.xyz"
 sei = "wss://sei.drpc.org"
 hedera = "https://mainnet.hashio.io/api"
+rootstock = "https://public-node.rsk.co"
+cronos = "https://cronos.drpc.org"
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/.config
 

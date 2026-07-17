@@ -3,7 +3,9 @@
 **Reproduce DeFi hack incidents using Foundry.**
 
 
-838 incidents included.
+853 incidents included.
+
+[DefiLlama 2023-onward reconciliation and scope boundary](docs/defillama-2023-onward-audit.md)
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -55,14 +57,14 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ## List of Past DeFi Incidents
 [20260715 BarnBridge](#20260715-barnbridge---governance-controlled-controller-approval-sweep)
+[20260714 Lumi Finance](#20260714-lumi-finance---erc-4337-validation-phase-paymaster-approval)
 [20260714 Drips Network](#20260714-drips-network---uint128-to-int128-sign-flip)
 [20260713 Chi Protocol](#20260713-chi-protocol---reserve-accounting-inflation)
 [20260711 Bonzo Lend](#20260711-bonzo-lend---zero-signature-oracle-proof)
+[20260706 SummerFi](#20260706-summerfi---fleetcommander-nav-inflation-via-depegged-xusd)
 [20260702 Hinkal](#20260702-hinkal---proofless-deposit)
-[20260714 Lumi Finance](#20260714-lumi-finance---erc-4337-validation-phase-paymaster-approval)
 [20260701 edel-xstock](#20260701-edel-xstock---price-oracle-manipulation)
 [20260629 Vault4626](#20260629-vault4626---business-logic-flaw)
-[20260706 SummerFi](#20260706-summerfi---fleetcommander-nav-inflation-via-depegged-xusd)
 [20260628 AIDC](#20260628-aidc---business-logic-flaw)
 [20260627 CookFinanceIssuance](#20260627-cookfinanceissuance---price-oracle-manipulation)
 [20260625 LixirPermitDrain](#20260625-lixirpermitdrain---broken-signature-verification)
@@ -104,6 +106,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20260604 BYToken](#20260604-bytoken---permissionless-triggerautoburn-reserve-manipulation)
 
 [20260604 ATM Token](#20260604-atm-token---hidden-transferfrom-auto-swap-drain)
+
+[20260601 Gnosis Pay](#20260601-gnosis-pay---reverted-erc-1271-magic-value-accepted)
 
 [20260530 AROS](#20260530-aros---signature-replay)
 
@@ -178,6 +182,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20260414 Saturn Protocol](#20260414-saturn-protocol---vulnerability-disclosure)
 
+[20260412 Hyperbridge](#20260412-hyperbridge---forged-postrequest-state-proof)
+
 [20260412 SubQuerySettings](#20260412-subquerysettings---settings-access-control)
 
 [20260407 SquidMulticallAllowanceDrain](#20260407-squidmulticallallowancedrain---arbitrary-call--wrong-approval)
@@ -226,6 +232,12 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 <details> <summary> 2025 </summary>
 
+[20251216 FutureSwap](past/2025/README.md#20251216-futureswap---flash-loan-governance-snapshot)
+
+[20251216 Yearn Fulcrum](past/2025/README.md#20251216-yearn-fulcrum---manipulable-legacy-strategy-accounting)
+
+[20251204 USPD](past/2025/README.md#20251204-uspd---proxy-in-the-middle-initialization-takeover)
+
 [20251201 yETH](past/2025/README.md#20251201-yeth---unsafe-math)
 
 [20251110 DRLVaultV3](past/2025/README.md#20251110-drlvaultv3---price-manipulation)
@@ -236,6 +248,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20251020 SharwaFinance](past/2025/README.md#20251020-sharwafinance---post-insolvency-check)
 
+[20251009 Astera.fi](past/2025/README.md#20251009-asterafi---liquidity-index-inflation)
+
 [20251007 TokenHolder](past/2025/README.md#20251007-tokenholder---access-control)
 
 [20251004 MIMSpell3](past/2025/README.md#20251004-mimspell3---bypassed-insolvency-check)
@@ -244,9 +258,11 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20250913 Kame](past/2025/README.md#20250913-kame---arbitary-external-call)
 
-[20250830 EverValueCoin](past/2025/README.md#20250830-evervaluecoin---arbitrage)
+[20250902 Bunni V2](past/2025/README.md#20250902-bunni-v2---liquidity-distribution-accounting-exploit)
 
 [20250831 Hexotic](past/2025/README.md#20250831-hexotic---incorrect-input-validation)
+
+[20250830 EverValueCoin](past/2025/README.md#20250830-evervaluecoin---arbitrage)
 
 [20250827 0xf340](past/2025/README.md#20250827-0xf340---access-control)
 
@@ -319,6 +335,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20250720 Stepp2p](past/2025/README.md#20250720-stepp2p---logic-flaw)
 
 [20250717 unverified](past/2025/README.md#20250717-unverified---signature-verification)
+
+[20250717 WETC](past/2025/README.md#20250717-wetc---incorrect-burn-logic)
 
 [20250716 StrategyLlamaLendConvex](past/2025/README.md#20250716-strategyllamalendconvex---share-price-manipulation)
 
@@ -394,6 +412,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20250527 UsualMoney](past/2025/README.md#20250527-usualmoney---arbitrage)
 
+[20250526 Dexodus Finance](past/2025/README.md#20250526-dexodus-finance---stale-signed-oracle-replay)
+
 [20250526 YDT](past/2025/README.md#20250526-ydt---logic-flaw)
 
 [20250525 Unverified_0000](past/2025/README.md#20250525-unverified_0000---access-control)
@@ -432,19 +452,23 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20250426 ImpermaxV3](past/2025/README.md#20250426-impermaxv3---flashloan-price-oracle-manipulation)
 
+[20250422 Bitcoin Mission](past/2025/README.md#20250422-bitcoin-mission---reusable-card-ids-and-insufficient-caller-validation)
+
+[20250418 BTNFT](past/2025/README.md#20250418-btnft---claim-rewards-without-protection)
+
+[20250416 YVToken](past/2025/README.md#20250416-yvtoken---not-slippage-protection)
+
 [20250416 Roar](past/2025/README.md#20250416-roar---rug-pull)
+
+[20250414 KiloEx](past/2025/README.md#20250414-kiloex---forged-forwarder-oracle-updates)
+
+[20250411 Unverified 0x6077](past/2025/README.md#20250411-unverified-0x6077---lack-of-access-control)
 
 [20250408 Laundromat](past/2025/README.md#20250408-laundromat---logic-flaw)
 
 [20250407 AmpKashi](past/2025/README.md#20250407-ampkashi---amp-collateral-borrow-price-manipulation)
 
 [20250404 AIRWA](past/2025/README.md#20250404-airwa---access-control)
-
-[20250418 BTNFT](past/2025/README.md#20250418-btnft---claim-rewards-without-protection)
-
-[20250416 YVToken](past/2025/README.md#20250416-yvtoken---not-slippage-protection)
-
-[20250411 Unverified 0x6077](past/2025/README.md#20250411-unverified-0x6077---lack-of-access-control)
 
 [20250330 LeverageSIR](past/2025/README.md#20250330-leveragesir---storage-slot1-collision)
 
@@ -546,6 +570,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 <details> <summary> 2024 </summary>
 
+[20241229 FEG Bridge](past/2024/README.md#20241229-feg-bridge---missing-relayer-access-control)
+
 [20241227 Bizness](past/2024/README.md#20241227-bizness---reentrancy)
 
 [20241223 Moonhacker](past/2024/README.md#20241223-moonhacker---improper-input-validation)
@@ -559,6 +585,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20241210 LABUBUToken](past/2024/README.md#20241210-labubu-token---logic-flaw)
 
 [20241210 CloberDEX](past/2024/README.md#20241210-cloberdex---reentrancy)
+
+[20241204 Vestra DAO](past/2024/README.md#20241204-vestra-dao---reusable-inactive-stake-record)
 
 [20241203 Pledge](past/2024/README.md#20241203-pledge---access-control)
 
@@ -679,8 +707,6 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20240724 Spectra_finance](past/2024/README.md#20240724-spectra_finance---incorrect-input-validation)
 
 [20240723 MEVbot_0xdd7c](past/2024/README.md#20240723-mevbot_0xdd7c---incorrect-input-validation)
-
-[20250717 WETC](#20250717-wetc---incorrect-burn-logic)
 
 [20240716 Lifiprotocol](past/2024/README.md#20240716-lifiprotocol---incorrect-input-validation)
 
@@ -822,13 +848,15 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20240325 ZongZi](past/2024/README.md#20240325-zongzi---price-manipulation)
 
-[20240314 ARK](past/2024/README.md#20240324-ark---business-logic-flaw)
+[20240324 ARK](past/2024/README.md#20240324-ark---business-logic-flaw)
 
 [20240323 CGT](past/2024/README.md#20240323-cgt---incorrect-access-control)
 
 [20240321 SSS](past/2024/README.md#20240321-sss---token-balance-doubles-on-transfer-to-self)
 
 [20240320 Paraswap](past/2024/README.md#20240320-paraswap---incorrect-access-control)
+
+[20240320 Dolomite](past/2024/README.md#20240320-dolomite---invalid-order-signature-bypass)
 
 [20240314 MO](past/2024/README.md#20240314-mo---business-logic-flaw)
 
@@ -859,6 +887,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20240223 CompoundUni](past/2024/README.md#20240223-CompoundUni---Oracle-bad-price)
 
 [20240223 BlueberryProtocol](past/2024/README.md#20240223-BlueberryProtocol---logic-flaw)
+
+[20240222 Tectonic](past/2024/README.md#20240222-tectonic---new-market-exchange-rate-inflation)
 
 [20240222 SwarmMarkets](past/2024/README.md#20240222-SwarmMarkets---lack-of-validation)
 
@@ -1201,6 +1231,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20230615 CFC](past/2023/README.md#20230615-cfc---uniswap-skim-token-balance-attack)
 
 [20230615 DEPUSDT_LEVUSDC](past/2023/README.md#20230615-depusdt_levusdc---incorrect-access-control)
+
+[20230614 Tropykus RSK](past/2023/README.md#20230614-tropykus-rsk---ksat-supplier-accounting-inflation)
 
 [20230612 Sturdy Finance](past/2023/README.md#20230612-sturdy-finance---read-only-reentrancy)
 
@@ -1762,6 +1794,16 @@ forge test --contracts ./src/test/2026-07 --match-path ./src/test/2026-07/BarnBr
 
 ---
 
+### 20260714 Lumi Finance - ERC-4337 Validation-Phase Paymaster Approval
+### Lost: ~264,000 USD
+```sh
+forge test --contracts ./src/test/2026-07/LumiFinance_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+[LumiFinance_exp.sol](src/test/2026-07/LumiFinance_exp.sol)
+
+---
+
 ### 20260714 Drips Network - uint128-to-int128 Sign Flip
 ### Lost: ~24,883 DAI
 ```sh
@@ -1790,6 +1832,21 @@ forge test --contracts ./src/test/2026-07 --match-path ./src/test/2026-07/BonzoL
 #### Contract
 [BonzoLend_exp.sol](src/test/2026-07/BonzoLend_exp.sol)
 
+Hedera executes EVM smart contracts, so the EIP-197 verifier flaw reproduces here. The downstream
+HTS token transfers use Hedera's native token precompile and are not emulated by ordinary Foundry.
+
+---
+
+### 20260706 SummerFi - FleetCommander NAV Inflation via Depegged xUSD
+### Lost: ~$6M (DAI + LVUSDC shares)
+```sh
+forge test --contracts ./src/test/2026-07/SummerFi_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+[SummerFi_exp.sol](src/test/2026-07/SummerFi_exp.sol)
+### Link reference
+https://etherscan.io/tx/0x0db528c44f23fc7fa4544684a2fab81096450a14aae8bc89f42cd0592d43da12
+
 ---
 
 ### 20260702 Hinkal - Proofless Deposit
@@ -1802,13 +1859,6 @@ forge test --contracts ./src/test/2026-07 --match-path ./src/test/2026-07/Hinkal
 
 ---
 
-### 20260714 Lumi Finance - ERC-4337 Validation-Phase Paymaster Approval
-### Lost: ~264,000 USD
-```sh
-forge test --contracts ./src/test/2026-07/LumiFinance_exp.sol -vvv --evm-version cancun
-```
-#### Contract
-[LumiFinance_exp.sol](src/test/2026-07/LumiFinance_exp.sol)
 ### 20260701 edel-xstock - Price Oracle Manipulation
 
 ### Lost: 204,215.57 USDC
@@ -1838,18 +1888,6 @@ forge test --contracts ./src/test/2026-06/Vault4626_exp.sol --evm-version shangh
 ### Link reference
 
 https://x.com/DefimonAlerts/status/2071495744071086510
-
----
-
-### 20260706 SummerFi - FleetCommander NAV Inflation via Depegged xUSD
-### Lost: ~$6M (DAI + LVUSDC shares)
-```sh
-forge test --contracts ./src/test/2026-07/SummerFi_exp.sol -vvv --evm-version cancun
-```
-#### Contract
-[SummerFi_exp.sol](src/test/2026-07/SummerFi_exp.sol)
-### Link reference
-https://etherscan.io/tx/0x0db528c44f23fc7fa4544684a2fab81096450a14aae8bc89f42cd0592d43da12
 
 ---
 
@@ -2218,6 +2256,23 @@ https://hacked.slowmist.io
 
 ---
 
+### 20260601 Gnosis Pay - Reverted ERC-1271 Magic Value Accepted
+
+### Lost: ~$1.2M across affected accounts
+
+```sh
+forge test --contracts ./src/test/2026-06 --match-path ./src/test/2026-06/GnosisPay_exp.sol -vvv --evm-version osaka
+```
+
+#### Contract
+[GnosisPay_exp.sol](src/test/2026-06/GnosisPay_exp.sol)
+
+### Link reference
+
+https://blog.verichains.io/p/gnosis-pay-exploit-the-devs-discovered
+
+---
+
 ### 20260530 AROS - Signature Replay
 ### Lost: ~$295K
 ```sh
@@ -2284,34 +2339,6 @@ forge test --contracts src/test/2026-05/JoeAgent_exp.sol -vvv
 https://x.com/SlowMist_Team/status/2059887450663551352
 
 ---
-### 20260525 SquidRouterModule - Missing caller check
-
-### Lost: 0.25 WBTC + 0.29 wTAO + 0.02 WETH
-
-
-```sh
-FOUNDRY_EVM_VERSION=cancun forge test --contracts ./src/test/2026-05/SquidRouterModule_exp.sol -vvv
-```
-#### Contract
-[SquidRouterModule_exp.sol](src/test/2026-05/SquidRouterModule_exp.sol)
-### Link reference
-
-https://t.me/defimon_alerts/3045
-
----
-
-### 20260525 New Market Trading - SquidRouterModule Missing Caller Check
-### Lost: ~$3.98M USD
-```sh
-FOUNDRY_EVM_VERSION=cancun forge test --contracts src/test/2026-05/NewMarketTrading_exp.sol --match-contract NewMarketTradingExploit -vv
-```
-#### Contract
-[NewMarketTrading_exp.sol](src/test/2026-05/NewMarketTrading_exp.sol)
-### Link reference
-https://rekt.news/newmarkettrading-rekt
-
----
-
 ### 20260526 SKP Token - Owner Backdoor LP Burn + Price Manipulation
 ### Lost: ~$212K USD
 ```sh
@@ -2339,6 +2366,35 @@ forge test --contracts src/test/2026-05/SKP_exp2.sol -vvv
 - https://bscscan.com/tx/0xbc01ea37bd2ff8f6aa6afcfbe0406114ff27a01e9aa56102bfa4ad8a0c2f25ee
 - https://bscscan.com/tx/0xadf1b6ff02a917043c816bc8bd1ed67038d64a19d06544b09ceeb872518fda37
 - https://www.bitget.com/amp/news/detail/12560605230076
+
+---
+### 20260525 SquidRouterModule - Missing caller check
+
+### Lost: 0.25 WBTC + 0.29 wTAO + 0.02 WETH
+
+
+```sh
+FOUNDRY_EVM_VERSION=cancun forge test --contracts ./src/test/2026-05/SquidRouterModule_exp.sol -vvv
+```
+#### Contract
+[SquidRouterModule_exp.sol](src/test/2026-05/SquidRouterModule_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/3045
+
+---
+
+### 20260525 New Market Trading - SquidRouterModule Missing Caller Check
+### Lost: ~$3.98M USD
+```sh
+FOUNDRY_EVM_VERSION=cancun forge test --contracts src/test/2026-05/NewMarketTrading_exp.sol --match-contract NewMarketTradingExploit -vv
+```
+#### Contract
+[NewMarketTrading_exp.sol](src/test/2026-05/NewMarketTrading_exp.sol)
+### Link reference
+https://rekt.news/newmarkettrading-rekt
+
+---
 
 ---
 
@@ -2752,6 +2808,24 @@ forge test --contracts src/test/2026-04/SaturnProtocol_exp.sol -vvv --fork-url h
 https://gist.github.com/sgInnora/b70ad98327649ed4ab976a122f45e485
 
 Note: Vendor states SAT-001 (underflow) is mitigated by `_validateTotals`, and SAT-002 (tolerance compound) is a trusted-role design observation.
+
+---
+
+### 20260412 Hyperbridge - Forged PostRequest State Proof
+
+### Lost: ~$2.5M
+
+```sh
+forge test --contracts ./src/test/2026-04 --match-path ./src/test/2026-04/Hyperbridge_exp.sol -vvv
+```
+
+#### Contract
+
+[Hyperbridge_exp.sol](src/test/2026-04/Hyperbridge_exp.sol)
+
+### Link reference
+
+https://etherscan.io/tx/0x240aeb9a8b2aabf64ed8e1e480d3e7be140cf530dc1e5606cb16671029401109
 
 ---
 

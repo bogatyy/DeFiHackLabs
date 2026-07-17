@@ -2,7 +2,24 @@
 
 ## 2024 - List of Past DeFi Incidents
 
-180 incidents included.
+184 incidents included.
+
+### 20241229 FEG Bridge - Missing Relayer Access Control
+
+### Lost: ~$1M
+
+```sh
+forge test --contracts ./src/test/2024-12 --match-path ./src/test/2024-12/FEGBridge_exp.sol -vvv
+```
+
+#### Contract
+[FEGBridge_exp.sol](../../src/test/2024-12/FEGBridge_exp.sol)
+
+### Link reference
+
+https://bscscan.com/tx/0x3de4f35885733d33a82c787c35fdb2ca8e89caa665b806c9b8d0ff37f2bd7080
+
+---
 
 ### 20241227 Bizness - Reentrancy
 
@@ -120,6 +137,23 @@ forge test --contracts ./src/test/2024-12/CloberDEX_exp.sol -vvv --evm-version c
 ### Link reference
 
 https://x.com/peckshield/status/1866443215186088048
+
+---
+
+### 20241204 Vestra DAO - Reusable Inactive Stake Record
+
+### Lost: ~$480K
+
+```sh
+forge test --contracts ./src/test/2024-12 --match-path ./src/test/2024-12/VestraDAO_exp.sol -vvv
+```
+
+#### Contract
+[VestraDAO_exp.sol](../../src/test/2024-12/VestraDAO_exp.sol)
+
+### Link reference
+
+https://etherscan.io/tx/0xa0dcf9b33a2a3ccfb397b9561be4d26fdd50ab79804a975a43aa94b27b262a3a
 
 ---
 
@@ -471,25 +505,6 @@ https://x.com/TenArmorAlert/status/1844753750386426182
 
 ---
 
-### 20241006 SASHAToken - Price Manipulation
-
-### Total Lost : 249 ETH (~$600K USD)
-
-```
-forge test --match-contract SASHAToken_exp -vvv
-```
-
-#### Contract
-
-[SASHAToken_exp.sol](../../src/test/2024-10/SASHAToken_exp.sol)
-
-### Link reference
-
- [Pending]
-
----
-
-
 ### 20241010 HYDT - Oracle Price Manipulation
 
 ### Total Lost : 5.8k USDT
@@ -505,6 +520,24 @@ forge test --contracts ./src/test/2024-10/HYDT_exp.sol -vvv --evm-version cancun
 ### Link reference
 
 https://x.com/TenArmorAlert/status/1844241843518951451
+
+---
+
+### 20241006 SASHAToken - Price Manipulation
+
+### Total Lost : 249 ETH (~$600K USD)
+
+```
+forge test --match-contract SASHAToken_exp -vvv
+```
+
+#### Contract
+
+[SASHAToken_exp.sol](../../src/test/2024-10/SASHAToken_exp.sol)
+
+### Link reference
+
+ [Pending]
 
 ---
 
@@ -526,24 +559,6 @@ forge test --match-contract AIZPTToken_exp -vvv
 
 ---
 
-### 20241001 FireToken - Pair Manipulation With Transfer Function
-
-### Lost: 8.45 ETH (~$20K USD)
-
-```sh
-forge test --contracts ./src/test/2024-10/FireToken_exp.sol -vvv
-```
-
-#### Contract
-
-[FireToken_exp.sol](../../src/test/2024-10/FireToken_exp.sol)
-
-### Link reference
-
- [Pending]
-
----
-
 ### 20241002 LavaLending - Price Manipulation
 
 ### Lost: 1 USDC, 125795.6 cUSDC, 0,0067 WBTC, 2.25 WETH (~$130K USD)
@@ -555,6 +570,24 @@ forge test --match-contract LavaLending_exp -vvv
 #### Contract
 
 [LavaLending_exp.sol](../../src/test/2024-10/LavaLending_exp.sol)
+
+### Link reference
+
+ [Pending]
+
+---
+
+### 20241001 FireToken - Pair Manipulation With Transfer Function
+
+### Lost: 8.45 ETH (~$20K USD)
+
+```sh
+forge test --contracts ./src/test/2024-10/FireToken_exp.sol -vvv
+```
+
+#### Contract
+
+[FireToken_exp.sol](../../src/test/2024-10/FireToken_exp.sol)
 
 ### Link reference
 
@@ -2421,6 +2454,24 @@ forge test --match-contract ZongZi_exp -vvv
 
 ---
 
+### 20240324 ARK - business logic flaw
+
+### Lost: ~348BNB
+
+```
+forge test --match-contract ARK_exp -vvv
+```
+
+#### Contract
+
+[ARK_exp.sol](../../src/test/2024-03/ARK_exp.sol)
+
+#### Link reference
+
+https://twitter.com/Phalcon_xyz/status/1771728823534375249
+
+---
+
 ### 20240323 CGT - Incorrect Access Control
 
 ### Lost: 996B (CGT token)
@@ -2455,26 +2506,6 @@ forge test --match-contract SSS_exp -vvv
 
 https://twitter.com/dot_pengun/status/1770989208125272481
 
----
-
-### 20240324 ARK - business logic flaw
-
-### Lost: ~348BNB
-
-```
-forge test --match-contract ARK_exp -vvv
-```
-
-#### Contract
-
-[ARK_exp.sol](../../src/test/2024-03/ARK_exp.sol)
-
-#### Link reference
-
-https://twitter.com/Phalcon_xyz/status/1771728823534375249
-
----
-
 ### 20240320 Paraswap - Incorrect Access Control
 
 ### Lost: ~24K
@@ -2490,6 +2521,24 @@ forge test --match-contract Paraswap_exp -vvv --evm-version shanghai
 #### Link reference
 
 https://medium.com/neptune-mutual/analysis-of-the-paraswap-exploit-1f97c604b4fe
+
+---
+
+### 20240320 Dolomite - Invalid Order Signature Bypass
+
+### Lost: ~$1.8M
+
+```sh
+forge test --contracts ./src/test/2024-03 --match-path ./src/test/2024-03/Dolomite_exp.sol -vvv
+```
+
+#### Contract
+
+[Dolomite_exp.sol](../../src/test/2024-03/Dolomite_exp.sol)
+
+#### Link reference
+
+https://etherscan.io/tx/0x4e5b294488736d467abcb8d8ef8536a1dcaf8848cb64fdf9f39c3b04c06271b2
 
 ---
 
@@ -2767,6 +2816,23 @@ forge test --match-contract BlueberryProtocol_exp -vvv
 #### Link reference
 
 https://twitter.com/blueberryFDN/status/1760865357236211964
+
+---
+
+### 20240222 Tectonic - New-Market Exchange-Rate Inflation
+
+### Lost: ~$250K
+
+```sh
+forge test --contracts ./src/test/2024-02 --match-path ./src/test/2024-02/Tectonic_exp.sol -vvv
+```
+
+#### Contract
+[Tectonic_exp.sol](../../src/test/2024-02/Tectonic_exp.sol)
+
+### Link reference
+
+https://cronoscan.com/tx/0x4c4584a57e5487a06e61c815c7ee368656ad58bd38774184eadcd97072dc1e4b
 
 ---
 

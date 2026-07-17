@@ -276,6 +276,8 @@
 
 [20230615 DEPUSDT_LEVUSDC](#20230615-depusdt_levusdc---incorrect-access-control)
 
+[20230614 Tropykus RSK](#20230614-tropykus-rsk---ksat-supplier-accounting-inflation)
+
 [20230612 Sturdy Finance](#20230612-sturdy-finance---read-only-reentrancy)
 
 [20230611 SellToken04](#20230611-sellToken04---Price-Manipulation)
@@ -3192,6 +3194,24 @@ https://twitter.com/numencyber/status/1669278694744150016?cxt=HHwWgMDS9Z2IvKouAA
 
 ---
 
+### 20230614 Tropykus RSK - kSAT Supplier Accounting Inflation
+
+### Lost: ~$150K
+
+```sh
+forge test --contracts ./src/test/2023-06 --match-path ./src/test/2023-06/Tropykus_exp.sol -vvv
+```
+
+#### Contract
+
+[Tropykus_exp.sol](../../src/test/2023-06/Tropykus_exp.sol)
+
+#### Link Reference
+
+https://rootstock.blockscout.com/tx/0x6e3a34e58cf8187df5c9ed2461390e36cc83d8889b1cd00c5292c2ae481ec58d
+
+---
+
 ### 20230612 Sturdy Finance - Read-Only-Reentrancy
 
 ### Lost: ~$800k
@@ -3601,6 +3621,26 @@ https://twitter.com/BlockSecTeam/status/1657411284076478465
 
 ---
 
+### 20230513 SellToken02 - Price Manipulation
+
+### Lost: ~$197k
+
+Testing
+
+```
+forge test --contracts ./src/test/2023-05/SellToken_exp.sol -vvv
+```
+
+#### Contract
+
+[SellToken_exp.sol](../../src/test/2023-05/SellToken_exp.sol)
+
+#### Link Reference
+
+https://twitter.com/BlockSecTeam/status/1657324561577435136
+
+---
+
 ### 20230512 LW - FlashLoan Price Manipulation
 
 ### Lost: ~$50k
@@ -3620,26 +3660,6 @@ forge test --contracts ./src/test/2023-05/LW_exp.sol -vvv
 https://twitter.com/PeckShieldAlert/status/1656850634312925184
 
 https://twitter.com/hexagate_/status/1657051084131639296
-
----
-
-### 20230513 SellToken02 - Price Manipulation
-
-### Lost: ~$197k
-
-Testing
-
-```
-forge test --contracts ./src/test/2023-05/SellToken_exp.sol -vvv
-```
-
-#### Contract
-
-[SellToken_exp.sol](../../src/test/2023-05/SellToken_exp.sol)
-
-#### Link Reference
-
-https://twitter.com/BlockSecTeam/status/1657324561577435136
 
 ---
 

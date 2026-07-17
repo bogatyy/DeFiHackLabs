@@ -2,6 +2,57 @@
 
 ## 2025 - List of Past DeFi Incidents
 
+### 20251216 FutureSwap - Flash-Loan Governance Snapshot
+
+### Lost: ~$270K
+
+```sh
+forge test --contracts ./src/test/2025-12 --match-path ./src/test/2025-12/FutureSwap_exp.sol -vvv --evm-version osaka
+```
+
+#### Contract
+[FutureSwap_exp.sol](../../src/test/2025-12/FutureSwap_exp.sol)
+
+### Link reference
+
+https://blog.verichains.io/p/governance-attack-flashloan-vote
+
+---
+
+### 20251216 Yearn Fulcrum - Manipulable Legacy Strategy Accounting
+
+### Lost: ~$307K
+
+```sh
+forge test --contracts ./src/test/2025-12 --match-path ./src/test/2025-12/YearnFulcrum_exp.sol -vvv --evm-version osaka
+```
+
+#### Contract
+[YearnFulcrum_exp.sol](../../src/test/2025-12/YearnFulcrum_exp.sol)
+
+### Link reference
+
+https://etherscan.io/tx/0x78921ce8d0361193b0d34bc76800ef4754ba9151a1837492f17c559f23771c43
+
+---
+
+### 20251204 USPD - Proxy-in-the-Middle Initialization Takeover
+
+### Lost: ~$1M
+
+```sh
+forge test --contracts ./src/test/2025-12 --match-path ./src/test/2025-12/USPD_exp.sol -vvv --evm-version osaka
+```
+
+#### Contract
+[USPD_exp.sol](../../src/test/2025-12/USPD_exp.sol)
+
+### Link reference
+
+https://uspd.io/blog/cpimp-attack-postmortem
+
+---
+
 ### 20251201 yETH - Unsafe Math
 
 ### Lost: 9M USD
@@ -92,6 +143,23 @@ https://x.com/phalcon_xyz/status/1980219745480946087?s=46
 
 ---
 
+### 20251009 Astera.fi - Liquidity-Index Inflation
+
+### Lost: ~$822K
+
+```sh
+forge test --contracts ./src/test/2025-10 --match-path ./src/test/2025-10/Astera_exp.sol -vvv --evm-version osaka
+```
+
+#### Contract
+[Astera_exp.sol](../../src/test/2025-10/Astera_exp.sol)
+
+### Link reference
+
+https://lineascan.build/tx/0xc574372f7411415a791e00076582b7f222214049b706991c8b40e2b7a7e7b988
+
+---
+
 ### 20251007 TokenHolder - Access Control
 
 ### Lost: 20 WBNB
@@ -168,19 +236,20 @@ https://x.com/SupremacyHQ/status/1966909841483636849
 
 ---
 
-### 20250830 EverValueCoin - Arbitrage
+### 20250902 Bunni V2 - Liquidity Distribution Accounting Exploit
 
-### Lost: 100k USD
-
+### Lost: ~$8.4M
 
 ```sh
-forge test --contracts ./src/test/2025-08/EverValueCoin -vvv
+forge test --contracts ./src/test/2025-09 --match-path ./src/test/2025-09/BunniV2_exp.sol -vvv --evm-version cancun
 ```
+
 #### Contract
-[EverValueCoin](../../src/test/2025-08/EverValueCoin)
+[BunniV2_exp.sol](../../src/test/2025-09/BunniV2_exp.sol)
+
 ### Link reference
 
-https://x.com/SuplabsYi/status/1961906638438445268
+https://blog.bunni.xyz/posts/sep-2-hack-post-mortem/
 
 ---
 
@@ -200,6 +269,19 @@ https://t.me/defimon_alerts/1757
 
 ---
 
+### 20250830 EverValueCoin - Arbitrage
+
+### Lost: 100k USD
+
+
+```sh
+forge test --contracts ./src/test/2025-08/EverValueCoin -vvv
+```
+#### Contract
+[EverValueCoin](../../src/test/2025-08/EverValueCoin)
+### Link reference
+
+https://x.com/SuplabsYi/status/1961906638438445268
 
 ### 20250827 0xf340 - Access Control
 
@@ -1418,6 +1500,23 @@ https://x.com/BlockSecTeam/status/1927601457815040283
 
 ---
 
+### 20250526 Dexodus Finance - Stale Signed Oracle Replay
+
+### Lost: ~$300K
+
+```sh
+forge test --contracts ./src/test/2025-05 --match-path ./src/test/2025-05/Dexodus_exp.sol -vvv --evm-version osaka
+```
+
+#### Contract
+[Dexodus_exp.sol](../../src/test/2025-05/Dexodus_exp.sol)
+
+### Link reference
+
+https://www.quillaudits.com/blog/hack-analysis/dexodus-finance-exploit
+
+---
+
 ### 20250526 YDT - Logic Flaw
 
 ### Lost: 41k USD
@@ -1726,6 +1825,23 @@ https://medium.com/@quillaudits/how-impermax-v3-lost-300k-in-a-flashloan-attack-
 
 ---
 
+### 20250422 Bitcoin Mission - Reusable Card IDs and Insufficient Caller Validation
+
+### Lost: ~$3.2M
+
+```sh
+forge test --contracts ./src/test/2025-04 --match-path ./src/test/2025-04/BitcoinMission_exp.sol -vvv
+```
+
+#### Contract
+[BitcoinMission_exp.sol](../../src/test/2025-04/BitcoinMission_exp.sol)
+
+### Link reference
+
+https://blockthreat.substack.com/p/blockthreat-week-17-2025
+
+---
+
 ### 20250418 BTNFT - Claim Rewards Without Protection
 
 ### Lost: 19025.9193312786235214 BUSD
@@ -1774,6 +1890,23 @@ forge test --contracts ./src/test/2025-04/Roar_exp.sol -vvv
 ### Link reference
 
 https://x.com/CertiKAlert/status/1912430535999189042
+
+---
+
+### 20250414 KiloEx - Forged Forwarder Oracle Updates
+
+### Lost: ~$7.5M
+
+```sh
+forge test --contracts ./src/test/2025-04 --match-path ./src/test/2025-04/KiloEx_exp.sol -vvv --evm-version cancun
+```
+
+#### Contract
+[KiloEx_exp.sol](../../src/test/2025-04/KiloEx_exp.sol)
+
+### Link reference
+
+https://quillaudits.medium.com/kiloex-exploit-breakdown-7-4m-drained-across-chains-ff6e2293d5cb
 
 ---
 

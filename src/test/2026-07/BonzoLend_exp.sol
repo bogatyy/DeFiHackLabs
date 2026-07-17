@@ -16,6 +16,10 @@ import "forge-std/Test.sol";
 // Supra's BLS verifier did not reject identity points. The attacker supplied committee id 2 with a
 // zero public key and zero signature, so the EIP-197 pairing equation held trivially. That wrote a
 // SAUCE price inflated by roughly 1e12; Bonzo then allowed two undercollateralized borrows.
+//
+// Hedera smart contracts execute EVM bytecode, so the vulnerable verifier and forged price update
+// reproduce in Foundry. The subsequent HTS token movements use Hedera's native token precompile;
+// those chain-native effects are outside an ordinary Foundry EVM, so this test stops at publication.
 
 contract BonzoLendExp is Test {
     address internal constant ATTACKER = 0x9A4966152F6e10b33Cb7a37975e8619816d6a494;
